@@ -8,8 +8,6 @@ interface AvatarProps {
 }
 
 const Avatar: React.FC<AvatarProps> = ({ user }) => {
-  console.log(user);
-
   return (
     <div className="relative">
       <div className="relative inline-block overflow-hidden rounded-full h-9 w-9 md:w-11 md:h-11">
