@@ -6,10 +6,11 @@ const useConversation = () => {
 
   const conversationId = useMemo(() => {
     if (!params?.conversationId) {
-      return;
+      return "";
     }
+
     return params.conversationId as string;
-  }, [params.conversationId]);
+  }, [params?.conversationId]);
 
   const isOpen = useMemo(() => !!conversationId, [conversationId]);
 
@@ -18,7 +19,7 @@ const useConversation = () => {
       isOpen,
       conversationId,
     }),
-    [conversationId, isOpen]
+    [isOpen, conversationId]
   );
 };
 
